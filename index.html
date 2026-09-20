@@ -185,13 +185,13 @@
   <!-- ==================== STEP 1: 表單填寫頁 ==================== -->
   <div id="step1" class="step-section active">
     
-    <!-- 頂部宣傳圖 (載入 top1.jpg)[cite: 17] -->
+    <!-- 頂部宣傳圖 (載入 top1.jpg)[cite: 17, 18] -->
     <div class="banner-wrapper">
       <img src="top1.jpg" alt="HCC 2ND ANNIVERSARY" onerror="this.style.display='none'">
     </div>
 
     <div class="card-box">
-      <!-- 依指定更新主標題與完整副標題文案 -->
+      <!-- 主標題與副標題文案[cite: 18] -->
       <h1 class="shop-title">HCC 兩週年紀念 T 恤，正式開放預購 👻</h1>
       <div class="shop-desc">這次帶來四個顏色：白色、黑色、灰紫色、綠色。把我們的幽靈穿在身上，一起留下兩週年的紀念。
 
@@ -219,6 +219,10 @@
       <div class="form-group">
         <label for="phone">聯絡手機號碼<span class="required-star">*</span></label>
         <input type="tel" id="phone" required placeholder="例如：0912345678">
+      </div>
+      <div class="form-group">
+        <label for="igHandle">IG 帳號名稱<span class="required-star">*</span></label>
+        <input type="text" id="igHandle" required placeholder="例如：@just20240811 或 just20240811">
       </div>
 
       <!-- 區塊 2: 取貨方式 -->
@@ -261,7 +265,7 @@
       </div>
 
       <div id="colorContainer">
-        <!-- 曜石黑 (#000000) -->
+        <!-- 曜石黑 (#000000)[cite: 18] -->
         <div class="color-card" data-color="曜石黑">
           <div class="color-card-head">
             <div class="swatch-group">
@@ -273,7 +277,7 @@
           <div id="counters-曜石黑"></div>
         </div>
 
-        <!-- 純白 (#FFFFFF) -->
+        <!-- 純白 (#FFFFFF)[cite: 18] -->
         <div class="color-card" data-color="純白">
           <div class="color-card-head">
             <div class="swatch-group">
@@ -285,7 +289,7 @@
           <div id="counters-純白"></div>
         </div>
 
-        <!-- 藕紫 (#946B82) -->
+        <!-- 藕紫 (#946B82)[cite: 18] -->
         <div class="color-card" data-color="藕紫">
           <div class="color-card-head">
             <div class="swatch-group">
@@ -297,7 +301,7 @@
           <div id="counters-藕紫"></div>
         </div>
 
-        <!-- 墨綠(棉質重磅落肩T) (#223B1C) -->
+        <!-- 墨綠(棉質重磅落肩T) (#223B1C)[cite: 18] -->
         <div class="color-card" data-color="墨綠(棉質重磅落肩T)">
           <div class="color-card-head">
             <div class="swatch-group">
@@ -310,7 +314,7 @@
         </div>
       </div>
 
-      <!-- 區塊 4: 加購大禮包與備註 -->
+      <!-- 區塊 4: 加購大禮包與備註[cite: 18] -->
       <div class="block-header" style="margin-top: 20px;">
         <div class="block-header-title"><span class="block-tag"></span>4. 加購專區與備註</div>
       </div>
@@ -351,6 +355,7 @@
       <div class="receipt-card">
         <div class="receipt-row"><span class="k">訂購姓名</span><span class="v" id="pv_name">-</span></div>
         <div class="receipt-row"><span class="k">聯絡手機</span><span class="v" id="pv_phone">-</span></div>
+        <div class="receipt-row"><span class="k">IG 帳號</span><span class="v" id="pv_ig">-</span></div>
         <div class="receipt-row"><span class="k">取貨方式</span><span class="v" id="pv_shipping">-</span></div>
         <div class="receipt-row"><span class="k">訂單備註</span><span class="v" id="pv_note">-</span></div>
         <hr style="border: none; border-top: 1.5px dashed var(--border-color); margin: 10px 0;">
@@ -384,13 +389,14 @@
         <div class="receipt-row"><span class="k">訂購時間</span><span class="v" id="fin_time">--</span></div>
         <div class="receipt-row"><span class="k">訂購姓名</span><span class="v" id="fin_name">--</span></div>
         <div class="receipt-row"><span class="k">聯絡電話</span><span class="v" id="fin_phone">--</span></div>
+        <div class="receipt-row"><span class="k">IG 帳號</span><span class="v" id="fin_ig">--</span></div>
         <div class="receipt-row"><span class="k">取貨資訊</span><span class="v" id="fin_shipping">--</span></div>
         <hr style="border: none; border-top: 1.5px dashed var(--border-color); margin: 10px 0;">
         <div class="receipt-row"><span class="k">購買明細</span><span class="v" id="fin_items">--</span></div>
         <div class="receipt-row"><span class="k">加購神祕禮包</span><span class="v" id="fin_addon">無</span></div>
         <div class="receipt-row total"><span class="k">應匯款總額</span><span class="v" id="fin_total">--</span></div>
 
-        <!-- 專屬指定付款資訊欄位 -->
+        <!-- 付款資訊欄位[cite: 18] -->
         <div class="payment-box">
           <h4>▍付款資訊</h4>
           <p><strong>戶名：</strong>林家宏</p>
@@ -404,7 +410,7 @@
       <!-- 功能按鈕 -->
       <button type="button" class="btn btn-save" id="savePicBtn">📸 儲存訂單明細圖片 (截圖存檔)</button>
       
-      <!-- Instagram 官方漸層 Logo 連結按鈕 -->
+      <!-- Instagram 官方漸層 Logo 連結按鈕[cite: 18] -->
       <a href="https://instagram.com/Just20240811" target="_blank" class="btn-ig">
         <svg viewBox="0 0 24 24">
           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -417,7 +423,7 @@
 
 </div>
 
-<!-- 尺寸表 Modal 彈窗 (載入 size1.jpg)[cite: 16] -->
+<!-- 尺寸表 Modal 彈窗 (載入 size1.jpg)[cite: 16, 18] -->
 <div class="modal-overlay" id="sizeChartModal" onclick="closeModalOnBg(event, 'sizeChartModal')">
   <div class="modal-content">
     <span class="modal-close" onclick="closeSizeChartModal()">✕</span>
@@ -427,7 +433,7 @@
 </div>
 
 <script>
-  // Google Apps Script Web App 網址
+  // 已直接更新為您提供的 Web App 正確網址 (/exec 結尾)
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHJrAvNWawrUUpKuJAZBBOsl5GDbO_rlIsNcsXhP23LpCXmsl0SfRmrdfPP9dom8zf/exec";
 
   const COLORS = ["曜石黑", "純白", "藕紫", "墨綠(棉質重磅落肩T)"];
@@ -439,7 +445,7 @@
   let addonCount = 0;
   const quantities = {};
 
-  // 初始化四色與尺寸
+  // 初始化四色與尺寸[cite: 18]
   function initPickers() {
     COLORS.forEach(color => {
       const chipsEl = document.getElementById(`chips-${color}`);
@@ -469,7 +475,7 @@
     });
   }
 
-  // 點選尺寸 Chip
+  // 點選尺寸 Chip[cite: 18]
   function toggleSelect(color, size) {
     const key = `${color}__${size}`;
     const pill = document.getElementById(`pill_${key}`);
@@ -487,7 +493,7 @@
     }
   }
 
-  // 加減數量
+  // 加減數量[cite: 18]
   function stepQty(key, delta) {
     let q = quantities[key] || 0;
     q += delta;
@@ -502,7 +508,7 @@
     }
   }
 
-  // 神祕禮包數量增減
+  // 神祕禮包數量增減[cite: 18]
   function stepAddon(delta) {
     addonCount += delta;
     if (addonCount < 0) addonCount = 0;
@@ -510,7 +516,7 @@
     document.getElementById('addonVal').innerText = addonCount;
   }
 
-  // 取件方式切換
+  // 取件方式切換[cite: 18]
   function selectShipping(type) {
     currentShipping = type;
     const tab711 = document.getElementById('tab711');
@@ -531,7 +537,7 @@
     }
   }
 
-  // 取得已選購衣服清單
+  // 取得已選購衣服清單[cite: 18]
   function getSelectedItems() {
     const list = [];
     let totalQty = 0;
@@ -546,15 +552,17 @@
     return { list, totalQty };
   }
 
-  // 前往步驟 2：核對明細
+  // 前往步驟 2：核對明細[cite: 18]
   function goToConfirm() {
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const igHandle = document.getElementById('igHandle').value.trim();
     const note = document.getElementById('note').value.trim();
     const { list, totalQty } = getSelectedItems();
 
     if (!name) return alert('請填寫訂購人真實姓名！');
     if (!phone) return alert('請填寫聯絡手機號碼！');
+    if (!igHandle) return alert('請填寫 IG 帳號名稱以利核對款項！');
 
     if (currentShipping === '7-11') {
       const sNum = document.getElementById('storeNumber').value.trim();
@@ -575,6 +583,7 @@
 
     document.getElementById('pv_name').innerText = name;
     document.getElementById('pv_phone').innerText = phone;
+    document.getElementById('pv_ig').innerText = igHandle;
     document.getElementById('pv_note').innerText = note || '無';
 
     if (currentShipping === '7-11') {
@@ -618,7 +627,7 @@
     btn.disabled = true;
     btn.innerText = "資料寫入中，請稍候...";
 
-    // 訂單編號：HCC + MMDD + 4碼隨機序號
+    // 訂單編號：HCC + MMDD + 4碼隨機序號[cite: 18]
     const now = new Date();
     const mm = String(now.getMonth() + 1).padStart(2, '0');
     const dd = String(now.getDate()).padStart(2, '0');
@@ -628,6 +637,7 @@
 
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const igHandle = document.getElementById('igHandle').value.trim();
     const note = document.getElementById('note').value.trim();
     const { list, totalQty } = getSelectedItems();
 
@@ -645,11 +655,13 @@
 
     const grandTotal = (totalQty * PRICE_PER_SHIRT) + (addonCount * PRICE_ADDON) + fee;
 
+    // 封裝訂單資料傳送至 Google Apps Script
     const payload = {
       orderId: orderId,
       timestamp: timestamp,
       name: name,
       phone: phone,
+      igHandle: igHandle,
       shipping: shippingStr,
       items: list.join(' ; ') + (addonCount > 0 ? ` | 神祕禮包 x ${addonCount}` : ''),
       totalQty: totalQty + addonCount,
@@ -669,6 +681,7 @@
       document.getElementById('fin_time').innerText = timestamp;
       document.getElementById('fin_name').innerText = name;
       document.getElementById('fin_phone').innerText = phone;
+      document.getElementById('fin_ig').innerText = igHandle;
       document.getElementById('fin_shipping').innerText = shippingStr;
       document.getElementById('fin_items').innerHTML = list.length > 0 ? list.join('<br>') : '未選購短T';
       document.getElementById('fin_addon').innerText = addonCount > 0 ? `${addonCount} 組` : '無';
@@ -683,7 +696,7 @@
     }
   }
 
-  // 截圖儲存明細
+  // 截圖儲存明細[cite: 18]
   document.getElementById('savePicBtn').addEventListener('click', () => {
     const area = document.getElementById('captureArea');
     html2canvas(area, { scale: 2, useCORS: true }).then(canvas => {
@@ -694,7 +707,7 @@
     });
   });
 
-  // 尺寸表 Modal 控制
+  // 尺寸表 Modal 控制[cite: 18]
   function openSizeChartModal() {
     document.getElementById('sizeChartModal').classList.add('active');
   }
