@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>HCC 兩週年紀念 T 恤 - 官方線上預購</title>
+  <title>HCC 2ND ANNIVERSARY 兩週年限定｜立體金屬紀念車牌 - 官方線上預購</title>
   <!-- 引入 html2canvas 支援一鍵產生明細圖 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <style>
@@ -47,8 +47,8 @@
     }
     .banner-wrapper img { width: 100%; height: auto; display: block; }
 
-    /* 標題與文案排版優化 */
-    .shop-title { font-size: 1.4rem; font-weight: 800; text-align: center; margin: 0 0 14px; color: var(--primary-dark); letter-spacing: -0.5px; }
+    /* 標題與文案排版 */
+    .shop-title { font-size: 1.32rem; font-weight: 800; text-align: center; margin: 0 0 14px; color: var(--primary-dark); letter-spacing: -0.3px; line-height: 1.4; }
     .shop-desc {
       font-size: 0.9rem;
       color: var(--text-sub);
@@ -62,7 +62,7 @@
       border: 1px solid var(--border-color);
     }
 
-    /* 區塊題目標題優化 */
+    /* 區塊題目標題 */
     .block-header {
       display: flex;
       align-items: center;
@@ -87,7 +87,7 @@
       display: inline-block;
     }
 
-    /* 欄位樣式優化 */
+    /* 欄位樣式 */
     .form-group { margin-bottom: 14px; }
     label { display: block; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; color: var(--secondary-dark); }
     .required-star { color: #ef4444; margin-left: 2px; }
@@ -107,42 +107,59 @@
     .pickup-notice { background: #fef3c7; border: 1px solid #fde68a; color: #92400e; padding: 12px 14px; border-radius: 10px; font-size: 0.9rem; font-weight: 700; margin-bottom: 14px; display: none; }
     .map-link { font-size: 0.82rem; color: var(--accent-blue); text-decoration: none; font-weight: 600; margin-left: 6px; }
 
-    /* 尺寸表按鈕 */
-    .btn-sizechart {
-      background: #f1f5f9; border: 1px solid #cbd5e1; color: var(--primary-dark); font-size: 0.8rem; font-weight: 700; padding: 5px 10px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: 0.15s;
+    /* 單一商品選購卡片 */
+    .product-card {
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fafbfc;
+      margin-bottom: 16px;
     }
-    .btn-sizechart:hover { background: #e2e8f0; }
-
-    /* 顏色卡片與色票 */
-    .color-card { border: 1px solid var(--border-color); border-radius: 12px; padding: 12px; margin-bottom: 12px; background: #fafbfc; }
-    .color-card-head { display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 0.95rem; margin-bottom: 8px; color: var(--primary-dark); }
-    .swatch-group { display: flex; align-items: center; gap: 8px; }
-    .swatch-box { width: 18px; height: 18px; border-radius: 4px; display: inline-block; }
-    .swatch-border { border: 1.5px solid #cbd5e1; }
-
-    /* 尺寸標籤與計數器 */
-    .size-chips-wrapper { display: flex; flex-wrap: wrap; gap: 6px; }
-    .size-chip {
-      padding: 6px 12px; border: 1.5px solid var(--border-color); border-radius: 8px; background: #fff; cursor: pointer; font-size: 0.85rem; font-weight: 700; color: var(--secondary-dark); transition: 0.15s;
+    .product-img-box {
+      width: 100%;
+      background: #111;
+      border-bottom: 1px solid var(--border-color);
     }
-    .size-chip.selected { border-color: var(--primary-dark); background: var(--primary-dark); color: #fff; }
-
-    .size-counter-row { display: none; align-items: center; justify-content: space-between; background: #fff; border: 1px dashed var(--border-color); border-radius: 8px; padding: 8px 12px; margin-top: 8px; }
-    .size-counter-row.active { display: flex; }
-    .counter-group { display: flex; align-items: center; gap: 4px; }
-    .counter-btn { width: 28px; height: 28px; border: 1px solid var(--border-color); background: #f8fafc; border-radius: 6px; cursor: pointer; font-size: 1.1rem; font-weight: bold; display: flex; align-items: center; justify-content: center; user-select: none; }
+    .product-img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .product-info-body {
+      padding: 14px;
+    }
+    .product-name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+    .product-price-tag {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: var(--price-red);
+      margin-bottom: 12px;
+    }
+    .product-qty-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 10px 14px;
+    }
+    .counter-group { display: flex; align-items: center; gap: 8px; }
+    .counter-btn { width: 32px; height: 32px; border: 1px solid var(--border-color); background: #f8fafc; border-radius: 8px; cursor: pointer; font-size: 1.15rem; font-weight: bold; display: flex; align-items: center; justify-content: center; user-select: none; color: var(--primary-dark); }
     .counter-btn:hover { background: #e2e8f0; }
-    .counter-val { min-width: 26px; text-align: center; font-weight: 800; font-size: 0.95rem; }
-
-    /* 加購專區 */
-    .addon-card { border: 1.5px solid #fed7aa; background: #fff7ed; border-radius: 12px; padding: 14px; margin-bottom: 14px; }
-    .addon-title { font-weight: 800; font-size: 0.95rem; color: #9a3412; }
-    .addon-price { font-weight: 800; color: var(--price-red); font-size: 0.92rem; }
+    .counter-val { min-width: 30px; text-align: center; font-weight: 800; font-size: 1.05rem; }
 
     /* 按鈕共通樣式 */
     .btn { width: 100%; padding: 14px; border-radius: 12px; font-size: 1rem; font-weight: 800; cursor: pointer; border: none; transition: 0.2s; text-align: center; }
     .btn-main { background: var(--primary-dark); color: #fff; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15); }
     .btn-main:active { transform: scale(0.98); }
+    .btn-main:disabled { opacity: 0.65; cursor: not-allowed; }
     .btn-outline { background: transparent; border: 1.5px solid var(--border-color); color: var(--text-sub); }
     .btn-save { background: var(--success-green); color: #fff; }
     
@@ -169,13 +186,6 @@
     .payment-box { background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 12px; padding: 14px; margin-top: 14px; }
     .payment-box h4 { margin: 0 0 6px; color: #1d4ed8; font-size: 0.98rem; }
     .payment-box p { margin: 4px 0; font-size: 0.9rem; color: #1e40af; }
-
-    /* 尺寸表 Modal 彈窗 */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 12px; backdrop-filter: blur(2px); }
-    .modal-overlay.active { display: flex; }
-    .modal-content { background: #fff; border-radius: 16px; max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 16px; position: relative; }
-    .modal-close { position: absolute; right: 14px; top: 12px; font-size: 1.5rem; font-weight: bold; cursor: pointer; color: #64748b; }
-    .modal-img { width: 100%; height: auto; border-radius: 10px; display: block; margin-top: 8px; }
   </style>
 </head>
 <body>
@@ -185,28 +195,40 @@
   <!-- ==================== STEP 1: 表單填寫頁 ==================== -->
   <div id="step1" class="step-section active">
     
-    <!-- 頂部宣傳圖 (載入 top1.jpg)[cite: 17, 18] -->
+    <!-- 頂部宣傳圖 (載入 banner.png) -->
     <div class="banner-wrapper">
-      <img src="top1.jpg" alt="HCC 2ND ANNIVERSARY" onerror="this.style.display='none'">
+      <img src="banner.png" alt="HCC 2ND ANNIVERSARY" onerror="this.style.display='none'">
     </div>
 
     <div class="card-box">
-      <!-- 主標題與副標題文案[cite: 18] -->
-      <h1 class="shop-title">HCC 兩週年紀念 T 恤，正式開放預購 👻</h1>
-      <div class="shop-desc">這次帶來四個顏色：白色、黑色、灰紫色、綠色。把我們的幽靈穿在身上，一起留下兩週年的紀念。
+      <!-- 主標題與商品介紹文案 -->
+      <h1 class="shop-title">HCC 2ND ANNIVERSARY<br>兩週年限定｜立體金屬紀念車牌</h1>
+      <div class="shop-desc">兩年的相聚，值得留下不一樣的紀念。
 
-🤍 白色／🖤 黑色／🩶 灰紫色
-同款涼感面料，穿起來硬挺有型，也保有透氣感。
+這次，我們將 HCC 的精神化作一面充滿質感的金屬車牌。
 
-💚 綠色
-延續之前使用的 8.3 盎司重磅面料，厚實、有質感。
+以消光黑作為車牌底色，搭配拋光金屬銀色立體字體，在不同光線下呈現細膩的金屬光澤。
 
-預購價｜每件 NT$890
-預購時間｜即日起至 9/25
-預購結束後恢復原價 NT$1,080。
+右下角加入 HCC 專屬幽靈，採用立體設計，讓整體不只是簡單的紀念品，更是一件值得收藏的作品。
 
-還可以加購 NT$300 兩週年神祕禮包 🎁
-內容先保密，但絕對物超所值。</div>
+細節特色
+
+- 消光黑車牌底座，低調沉穩
+- 拋光金屬銀色字體，展現金屬光澤
+- HCC Logo 與週年字樣立體呈現
+- 右下角專屬立體幽靈點綴
+- HCC 兩週年限定紀念設計
+
+販售價格｜NT$760
+
+製作時間｜約一個月工作天
+
+本商品採訂製方式製作，需經過製作與細節處理，請耐心等候。實際出貨時間依製作進度為準。
+
+不只是車牌，更是屬於 HCC 的兩年回憶。
+
+HCC 2ND ANNIVERSARY
+Two Years. One Family.</div>
 
       <!-- 區塊 1: 訂購人資料 -->
       <div class="block-header">
@@ -258,86 +280,35 @@
         📍 花蓮面交：到貨後通知及約地點取件。
       </div>
 
-      <!-- 區塊 3: 本次訂購顏色及尺寸(每件$890元) -->
+      <!-- 區塊 3: 商品選購 -->
       <div class="block-header" style="margin-top: 20px;">
-        <div class="block-header-title"><span class="block-tag"></span>3. 本次訂購顏色及尺寸(每件$890元)</div>
-        <button type="button" class="btn-sizechart" onclick="openSizeChartModal()">📐 點我看尺寸平量表</button>
+        <div class="block-header-title"><span class="block-tag"></span>3. 商品選購</div>
       </div>
 
-      <div id="colorContainer">
-        <!-- 曜石黑 (#000000)[cite: 18] -->
-        <div class="color-card" data-color="曜石黑">
-          <div class="color-card-head">
-            <div class="swatch-group">
-              <span class="swatch-box" style="background: #000000;"></span>
-              <span>曜石黑</span>
-            </div>
-          </div>
-          <div class="size-chips-wrapper" id="chips-曜石黑"></div>
-          <div id="counters-曜石黑"></div>
+      <div class="product-card">
+        <div class="product-img-box">
+          <img src="product.jpg" alt="HCC 2ND ANNIVERSARY 兩週年限定｜立體金屬紀念車牌">
         </div>
-
-        <!-- 純白 (#FFFFFF)[cite: 18] -->
-        <div class="color-card" data-color="純白">
-          <div class="color-card-head">
-            <div class="swatch-group">
-              <span class="swatch-box swatch-border" style="background: #ffffff;"></span>
-              <span>純白</span>
+        <div class="product-info-body">
+          <div class="product-name">HCC 2ND ANNIVERSARY 兩週年限定｜立體金屬紀念車牌</div>
+          <div class="product-price-tag">NT$ 760 / 片</div>
+          <div class="product-qty-bar">
+            <span style="font-size: 0.92rem; font-weight: 700; color: var(--secondary-dark);">訂購數量：</span>
+            <div class="counter-group">
+              <div class="counter-btn" onclick="stepQty(-1)">−</div>
+              <div class="counter-val" id="qtyVal">1</div>
+              <div class="counter-btn" onclick="stepQty(1)">＋</div>
             </div>
           </div>
-          <div class="size-chips-wrapper" id="chips-純白"></div>
-          <div id="counters-純白"></div>
-        </div>
-
-        <!-- 藕紫 (#946B82)[cite: 18] -->
-        <div class="color-card" data-color="藕紫">
-          <div class="color-card-head">
-            <div class="swatch-group">
-              <span class="swatch-box" style="background: #946B82;"></span>
-              <span>藕紫</span>
-            </div>
-          </div>
-          <div class="size-chips-wrapper" id="chips-藕紫"></div>
-          <div id="counters-藕紫"></div>
-        </div>
-
-        <!-- 墨綠(棉質重磅落肩T) (#223B1C)[cite: 18] -->
-        <div class="color-card" data-color="墨綠(棉質重磅落肩T)">
-          <div class="color-card-head">
-            <div class="swatch-group">
-              <span class="swatch-box" style="background: #223B1C;"></span>
-              <span>墨綠(棉質重磅落肩T)</span>
-            </div>
-          </div>
-          <div class="size-chips-wrapper" id="chips-墨綠(棉質重磅落肩T)"></div>
-          <div id="counters-墨綠(棉質重磅落肩T)"></div>
         </div>
       </div>
 
-      <!-- 區塊 4: 加購大禮包與備註[cite: 18] -->
+      <!-- 區塊 4: 訂單備註 -->
       <div class="block-header" style="margin-top: 20px;">
-        <div class="block-header-title"><span class="block-tag"></span>4. 加購專區與備註</div>
+        <div class="block-header-title"><span class="block-tag"></span>4. 訂單備註</div>
       </div>
-      <div class="addon-card">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <div class="addon-title">🎁 加購「兩週年神祕禮包」</div>
-            <div style="font-size: 0.8rem; color: #7c2d12;">內容先保密，但絕對物超所值！</div>
-          </div>
-          <div class="addon-price">+NT$300 / 組</div>
-        </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-          <span style="font-size: 0.88rem; font-weight: 700; color: #7c2d12;">選擇數量：</span>
-          <div class="counter-group">
-            <div class="counter-btn" onclick="stepAddon(-1)">−</div>
-            <div class="counter-val" id="addonVal">0</div>
-            <div class="counter-btn" onclick="stepAddon(1)">＋</div>
-          </div>
-        </div>
-      </div>
-
       <div class="form-group">
-        <label for="note">訂單備註 (選填)</label>
+        <label for="note">備註事項 (選填)</label>
         <textarea id="note" rows="2" placeholder="若有其他特殊需求請填寫在此"></textarea>
       </div>
 
@@ -359,9 +330,8 @@
         <div class="receipt-row"><span class="k">取貨方式</span><span class="v" id="pv_shipping">-</span></div>
         <div class="receipt-row"><span class="k">訂單備註</span><span class="v" id="pv_note">-</span></div>
         <hr style="border: none; border-top: 1.5px dashed var(--border-color); margin: 10px 0;">
-        <div class="receipt-row"><span class="k">預購衣服明細</span><span class="v" id="pv_items">-</span></div>
-        <div class="receipt-row" id="pv_addonRow" style="display: none;"><span class="k">兩週年神祕禮包</span><span class="v" id="pv_addon">-</span></div>
-        <div class="receipt-row"><span class="k">短T件數總計</span><span class="v" id="pv_tCount">-</span></div>
+        <div class="receipt-row"><span class="k">訂購商品</span><span class="v" id="pv_items">-</span></div>
+        <div class="receipt-row"><span class="k">訂購數量</span><span class="v" id="pv_qty">-</span></div>
         <div class="receipt-row"><span class="k">商品總額</span><span class="v" id="pv_subtotal">-</span></div>
         <div class="receipt-row"><span class="k">運費金額</span><span class="v" id="pv_fee">-</span></div>
         <div class="receipt-row total"><span class="k">應付總額</span><span class="v" id="pv_total">-</span></div>
@@ -393,10 +363,9 @@
         <div class="receipt-row"><span class="k">取貨資訊</span><span class="v" id="fin_shipping">--</span></div>
         <hr style="border: none; border-top: 1.5px dashed var(--border-color); margin: 10px 0;">
         <div class="receipt-row"><span class="k">購買明細</span><span class="v" id="fin_items">--</span></div>
-        <div class="receipt-row"><span class="k">加購神祕禮包</span><span class="v" id="fin_addon">無</span></div>
         <div class="receipt-row total"><span class="k">應匯款總額</span><span class="v" id="fin_total">--</span></div>
 
-        <!-- 付款資訊欄位[cite: 18] -->
+        <!-- 付款資訊欄位 -->
         <div class="payment-box">
           <h4>▍付款資訊</h4>
           <p><strong>戶名：</strong>林家宏</p>
@@ -410,7 +379,7 @@
       <!-- 功能按鈕 -->
       <button type="button" class="btn btn-save" id="savePicBtn">📸 儲存訂單明細圖片 (截圖存檔)</button>
       
-      <!-- Instagram 官方漸層 Logo 連結按鈕[cite: 18] -->
+      <!-- Instagram 官方漸層 Logo 連結按鈕 -->
       <a href="https://instagram.com/Just20240811" target="_blank" class="btn-ig">
         <svg viewBox="0 0 24 24">
           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -423,100 +392,25 @@
 
 </div>
 
-<!-- 尺寸表 Modal 彈窗 (載入 size1.jpg)[cite: 16, 18] -->
-<div class="modal-overlay" id="sizeChartModal" onclick="closeModalOnBg(event, 'sizeChartModal')">
-  <div class="modal-content">
-    <span class="modal-close" onclick="closeSizeChartModal()">✕</span>
-    <h3 style="margin: 0; font-size: 1.15rem; color: var(--primary-dark);">官方尺寸平量表 (Size Chart)</h3>
-    <img src="size1.jpg" alt="HCC 官方尺寸表" class="modal-img">
-  </div>
-</div>
-
 <script>
-  // 已直接更新為您提供的 Web App 正確網址 (/exec 結尾)
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzHJrAvNWawrUUpKuJAZBBOsl5GDbO_rlIsNcsXhP23LpCXmsl0SfRmrdfPP9dom8zf/exec";
+  // 已更新為您的 Google Apps Script Web App 網址
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIKy2CCNgPn5bRQo-hIJph0xKOvXMi_JRAXxfmYbUe7yZH88WyusJiyVdhmY0wVcJkMA/exec";
 
-  const COLORS = ["曜石黑", "純白", "藕紫", "墨綠(棉質重磅落肩T)"];
-  const SIZES = ["XS", "S", "M", "L", "XL", "2XL", "3XL"];
-  const PRICE_PER_SHIRT = 890;
-  const PRICE_ADDON = 300;
+  const PRODUCT_NAME = "HCC 2ND ANNIVERSARY 兩週年限定｜立體金屬紀念車牌";
+  const UNIT_PRICE = 760;
 
   let currentShipping = "7-11";
-  let addonCount = 0;
-  const quantities = {};
+  let itemQty = 1;
 
-  // 初始化四色與尺寸[cite: 18]
-  function initPickers() {
-    COLORS.forEach(color => {
-      const chipsEl = document.getElementById(`chips-${color}`);
-      const countersEl = document.getElementById(`counters-${color}`);
-      let chipsHtml = '';
-      let countersHtml = '';
-
-      SIZES.forEach(sz => {
-        const key = `${color}__${sz}`;
-        quantities[key] = 0;
-
-        chipsHtml += `<div class="size-chip" id="pill_${key}" onclick="toggleSelect('${color}', '${sz}')">${sz}</div>`;
-        countersHtml += `
-          <div class="size-counter-row" id="cRow_${key}">
-            <span style="font-weight: 700; font-size: 0.88rem; color: var(--primary-dark);">尺寸 ${sz} 數量：</span>
-            <div class="counter-group">
-              <div class="counter-btn" onclick="stepQty('${key}', -1)">−</div>
-              <div class="counter-val" id="val_${key}">1</div>
-              <div class="counter-btn" onclick="stepQty('${key}', 1)">＋</div>
-            </div>
-          </div>
-        `;
-      });
-
-      chipsEl.innerHTML = chipsHtml;
-      countersEl.innerHTML = countersHtml;
-    });
+  // 數量增減
+  function stepQty(delta) {
+    itemQty += delta;
+    if (itemQty < 1) itemQty = 1;
+    if (itemQty > 50) itemQty = 50;
+    document.getElementById('qtyVal').innerText = itemQty;
   }
 
-  // 點選尺寸 Chip[cite: 18]
-  function toggleSelect(color, size) {
-    const key = `${color}__${size}`;
-    const pill = document.getElementById(`pill_${key}`);
-    const row = document.getElementById(`cRow_${key}`);
-
-    if (quantities[key] > 0) {
-      quantities[key] = 0;
-      pill.classList.remove('selected');
-      row.classList.remove('active');
-    } else {
-      quantities[key] = 1;
-      pill.classList.add('selected');
-      row.classList.add('active');
-      document.getElementById(`val_${key}`).innerText = "1";
-    }
-  }
-
-  // 加減數量[cite: 18]
-  function stepQty(key, delta) {
-    let q = quantities[key] || 0;
-    q += delta;
-    if (q <= 0) {
-      quantities[key] = 0;
-      document.getElementById(`pill_${key}`).classList.remove('selected');
-      document.getElementById(`cRow_${key}`).classList.remove('active');
-    } else {
-      if (q > 30) q = 30;
-      quantities[key] = q;
-      document.getElementById(`val_${key}`).innerText = q;
-    }
-  }
-
-  // 神祕禮包數量增減[cite: 18]
-  function stepAddon(delta) {
-    addonCount += delta;
-    if (addonCount < 0) addonCount = 0;
-    if (addonCount > 20) addonCount = 20;
-    document.getElementById('addonVal').innerText = addonCount;
-  }
-
-  // 取件方式切換[cite: 18]
+  // 取件方式切換
   function selectShipping(type) {
     currentShipping = type;
     const tab711 = document.getElementById('tab711');
@@ -537,28 +431,12 @@
     }
   }
 
-  // 取得已選購衣服清單[cite: 18]
-  function getSelectedItems() {
-    const list = [];
-    let totalQty = 0;
-    for (let k in quantities) {
-      const q = quantities[k];
-      if (q > 0) {
-        const [c, s] = k.split('__');
-        list.push(`${c} [${s}] x ${q}`);
-        totalQty += q;
-      }
-    }
-    return { list, totalQty };
-  }
-
-  // 前往步驟 2：核對明細[cite: 18]
+  // 前往步驟 2：核對明細
   function goToConfirm() {
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const igHandle = document.getElementById('igHandle').value.trim();
     const note = document.getElementById('note').value.trim();
-    const { list, totalQty } = getSelectedItems();
 
     if (!name) return alert('請填寫訂購人真實姓名！');
     if (!phone) return alert('請填寫聯絡手機號碼！');
@@ -571,13 +449,11 @@
       if (!sName) return alert('請填寫 7-11 門市店名！');
     }
 
-    if (totalQty === 0 && addonCount === 0) {
-      return alert('請至少挑選一件短T或加購神祕禮包！');
+    if (itemQty < 1) {
+      return alert('請至少選購 1 片紀念車牌！');
     }
 
-    const shirtSub = totalQty * PRICE_PER_SHIRT;
-    const addonSub = addonCount * PRICE_ADDON;
-    const itemSubtotal = shirtSub + addonSub;
+    const itemSubtotal = itemQty * UNIT_PRICE;
     const shippingFee = (currentShipping === '7-11') ? 60 : 0;
     const grandTotal = itemSubtotal + shippingFee;
 
@@ -594,16 +470,8 @@
       document.getElementById('pv_shipping').innerText = '花蓮面交 (到貨後通知及約地點)';
     }
 
-    document.getElementById('pv_items').innerHTML = list.length > 0 ? list.join('<br>') : '未選購短T';
-    
-    if (addonCount > 0) {
-      document.getElementById('pv_addonRow').style.display = 'flex';
-      document.getElementById('pv_addon').innerText = `${addonCount} 組 (+NT$${addonSub})`;
-    } else {
-      document.getElementById('pv_addonRow').style.display = 'none';
-    }
-
-    document.getElementById('pv_tCount').innerText = `${totalQty} 件`;
+    document.getElementById('pv_items').innerText = PRODUCT_NAME;
+    document.getElementById('pv_qty').innerText = `${itemQty} 片`;
     document.getElementById('pv_subtotal').innerText = `NT$ ${itemSubtotal.toLocaleString()}`;
     document.getElementById('pv_fee').innerText = shippingFee > 0 ? `NT$ ${shippingFee}` : '免運費';
     document.getElementById('pv_total').innerText = `NT$ ${grandTotal.toLocaleString()}`;
@@ -621,25 +489,16 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // 正式送出訂單
+  // 正式送出訂單 (由後端回傳遞增流水號訂單編號)
   async function submitOrder() {
     const btn = document.getElementById('submitOrderBtn');
     btn.disabled = true;
     btn.innerText = "資料寫入中，請稍候...";
 
-    // 訂單編號：HCC + MMDD + 4碼隨機序號[cite: 18]
-    const now = new Date();
-    const mm = String(now.getMonth() + 1).padStart(2, '0');
-    const dd = String(now.getDate()).padStart(2, '0');
-    const seq = Math.floor(1000 + Math.random() * 9000);
-    const orderId = `HCC${mm}${dd}${seq}`;
-    const timestamp = now.toLocaleString('zh-TW', { hour12: false });
-
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const igHandle = document.getElementById('igHandle').value.trim();
     const note = document.getElementById('note').value.trim();
-    const { list, totalQty } = getSelectedItems();
 
     let shippingStr = "";
     let fee = 0;
@@ -653,41 +512,44 @@
       fee = 0;
     }
 
-    const grandTotal = (totalQty * PRICE_PER_SHIRT) + (addonCount * PRICE_ADDON) + fee;
+    const grandTotal = (itemQty * UNIT_PRICE) + fee;
+    const itemDesc = `${PRODUCT_NAME} x ${itemQty}`;
 
-    // 封裝訂單資料傳送至 Google Apps Script
     const payload = {
-      orderId: orderId,
-      timestamp: timestamp,
       name: name,
       phone: phone,
       igHandle: igHandle,
       shipping: shippingStr,
-      items: list.join(' ; ') + (addonCount > 0 ? ` | 神祕禮包 x ${addonCount}` : ''),
-      totalQty: totalQty + addonCount,
-      note: `總金額: NT$${grandTotal} | 備註: ${note || '無'}`
+      items: itemDesc,
+      totalQty: itemQty,
+      grandTotal: grandTotal,
+      note: note || '無'
     };
 
     try {
-      await fetch(SCRIPT_URL, {
+      // 使用 text/plain 避開 CORS 預檢並取得後端回傳的遞增訂單編號
+      const response = await fetch(SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(payload)
       });
 
-      // 渲染步驟 3 憑證卡片
-      document.getElementById('fin_orderId').innerText = orderId;
-      document.getElementById('fin_time').innerText = timestamp;
-      document.getElementById('fin_name').innerText = name;
-      document.getElementById('fin_phone').innerText = phone;
-      document.getElementById('fin_ig').innerText = igHandle;
-      document.getElementById('fin_shipping').innerText = shippingStr;
-      document.getElementById('fin_items').innerHTML = list.length > 0 ? list.join('<br>') : '未選購短T';
-      document.getElementById('fin_addon').innerText = addonCount > 0 ? `${addonCount} 組` : '無';
-      document.getElementById('fin_total').innerText = `NT$ ${grandTotal.toLocaleString()}`;
+      const result = await response.json();
 
-      switchStep(3);
+      if (result.status === "success") {
+        document.getElementById('fin_orderId').innerText = result.orderId;
+        document.getElementById('fin_time').innerText = result.timestamp;
+        document.getElementById('fin_name').innerText = name;
+        document.getElementById('fin_phone').innerText = phone;
+        document.getElementById('fin_ig').innerText = igHandle;
+        document.getElementById('fin_shipping').innerText = shippingStr;
+        document.getElementById('fin_items').innerText = itemDesc;
+        document.getElementById('fin_total').innerText = `NT$ ${grandTotal.toLocaleString()}`;
+
+        switchStep(3);
+      } else {
+        throw new Error(result.message || "後端寫入錯誤");
+      }
 
     } catch (err) {
       alert("訂單送出失敗，請檢查網路連線或稍後再試！");
@@ -696,7 +558,7 @@
     }
   }
 
-  // 截圖儲存明細[cite: 18]
+  // 截圖儲存明細
   document.getElementById('savePicBtn').addEventListener('click', () => {
     const area = document.getElementById('captureArea');
     html2canvas(area, { scale: 2, useCORS: true }).then(canvas => {
@@ -706,23 +568,6 @@
       link.click();
     });
   });
-
-  // 尺寸表 Modal 控制[cite: 18]
-  function openSizeChartModal() {
-    document.getElementById('sizeChartModal').classList.add('active');
-  }
-  function closeSizeChartModal() {
-    document.getElementById('sizeChartModal').classList.remove('active');
-  }
-  function closeModalOnBg(e, modalId) {
-    if (e.target.id === modalId) {
-      document.getElementById(modalId).classList.remove('active');
-    }
-  }
-
-  window.onload = () => {
-    initPickers();
-  };
 </script>
 
 </body>
